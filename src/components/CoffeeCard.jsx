@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaEye, FaPen } from 'react-icons/fa';
+import { MdDelete } from 'react-icons/md';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
 
@@ -61,12 +63,12 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
                 <div className="card-actions justify-end">
                     <div className="join join-vertical space-y-2">
                         <Link to={`/coffee/${_id}`}>
-                            <button className="btn join-item">View</button>
+                            <button className="btn join-item text-xl"><FaEye /></button>
                         </Link>
                         <Link to={`/updateCoffee/${_id}`}>
-                            <button className="btn join-item">Edit</button>
+                            <button className="btn join-item text-xl"><FaPen /></button>
                         </Link>
-                        <button onClick={() => handleDelete(_id)} className="btn join-item">X</button>
+                        <button onClick={() => handleDelete(_id)} className="btn join-item bg-red-500 text-white text-2xl"><MdDelete /></button>
                     </div>
                 </div>
             </div>

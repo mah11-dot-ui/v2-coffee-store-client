@@ -1,13 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { NavLink } from 'react-router';
 
 const Header = () => {
     const navOptions = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="addCoffee">Add coffee</Link></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/addCoffee">Add coffee</NavLink></li>
+        <li><NavLink to="/signIn">Sign In</NavLink></li>
+        <li><NavLink to="/signUp">Sign Up</NavLink></li>
+        <li><NavLink to="/users">Users</NavLink></li>
     </>
     return (
-        <div>
+        <div className='max-w-7xl mx-auto'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
